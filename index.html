@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+ </head>
+ <body>
+	<!--分数-->
+	 <p>SCORE:<span id="score">
+		0
+	</span></p>
+	<div id="main">
+		<div id="input" onclick="javascript:game.goal();"></div>
+		<div id="error" onclick="javascript:game.defeat();"></div>
+	</div>	
+	<!--游戏开始-->
+	<div id="gamestart">
+		<div></div>	
+		<p>
+			眼力大考验<br />
+			<b> </b>
+		<a href="javascript:game.startFirst();" class="btn">开始游戏</a>
+		</p>
+	</div>
+	<!--游戏结束-->
+	<div id="gameover">
+		<div></div>
+		<p>
+			你点错啦！<br />
+			SCORE:<span id="final">0</span>
+			<br />
+			<a class="btn" href="javascript:game.start();">再来！</a>
+		</p>
+	</div>
+  <script type="text/javascript" src="index.js"></script>
+ </body>
+</html>
