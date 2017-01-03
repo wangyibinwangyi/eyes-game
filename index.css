@@ -1,0 +1,98 @@
+body{
+	background:#dfdcda;
+}
+#main{
+	width:600px;
+	height:600px;
+	background:#fedfdf;
+	position:relative;
+	border-radius:10px;
+	margin:0 auto;
+}
+#input{
+	width:50px;
+	height:50px;
+	position:relative;
+	top:0;
+	left:0;
+	background:#fff;
+	border-radius:10px;
+	z-index:10;
+	transition:background .15s ease-in-out;
+}
+#error{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:#fedf00;
+	border-radius:10px;
+	z-index:5;
+	transition:background .15s ease-in-out;
+}
+
+p{
+	width:600px;
+	margin:0 auto;
+	font-size:40px;
+	font-family:Arial;
+	font-weight:bold;
+	padding-top:15px;
+}
+
+
+#gameover,#gamestart{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	display:none;
+	z-index:100;
+}
+#gamestart{
+	display:block;
+}
+#gameover>div,#gamestart>div{
+	width:100%;
+	height:100%;
+	background:#555;
+	opacity:0.5;
+}
+#gameover>p,#gamestart>p{
+	width:300px;
+	height:180px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-150px;
+	padding-top:20px;
+	background:#fff;
+	border-radius:10px;
+	text-align:center;
+	line-height:1.5em;
+	border:1px solid #edcf72;
+}
+#gameover>p{
+	height:200px;
+	padding-top:0;
+}
+#gamestart .btn{
+	padding:10px;
+	color:#fff;
+	background:#9f8b77;
+	border-radius:6px;
+	text-decoration:none;
+	position:relative;
+	top:20px;
+}
+#gameover .btn{
+	padding:10px;
+	color:#fff;
+	background:#9f8b77;
+	border-radius:6px;
+	text-decoration:none;
+	position:relative;
+}
