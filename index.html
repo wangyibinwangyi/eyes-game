@@ -3,36 +3,456 @@
  <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="index.css">
  </head>
  <body>
-	<!--分数-->
-	 <p>SCORE:<span id="score">
-		0
-	</span></p>
-	<div id="main">
-		<div id="input" onclick="javascript:game.goal();"></div>
-		<div id="error" onclick="javascript:game.defeat();"></div>
-	</div>	
-	<!--游戏开始-->
+	<p>
+		SCORE:
+		<span id="score">0</span>
+		<span>剩余时间：</span>
+		<span id="time"></span>
+		<a id="stop" onclick="pause();">暂停</a>
+	</p>
+
+  <div id="main">
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+	<div class="cell"></div>
+  </div>
+
+<!--游戏开始-->
 	<div id="gamestart">
 		<div></div>	
 		<p>
-			眼力大考验<br />
+			眼力大考验2.0<br />
 			<b> </b>
 		<a href="javascript:game.startFirst();" class="btn">开始游戏</a>
 		</p>
 	</div>
-	<!--游戏结束-->
+
+  	<!--游戏结束-->
 	<div id="gameover">
 		<div></div>
 		<p>
 			你点错啦！<br />
 			SCORE:<span id="final">0</span>
 			<br />
-			<a class="btn" href="javascript:game.start();">再来！</a>
+			<a class="btn" href="javascript:game.start();">不信了再来</a>
 		</p>
 	</div>
-  <script type="text/javascript" src="index.js"></script>
+	<div id="timeover">
+		<div></div>
+		<p>
+			时间终止<br />
+			SCORE:<span id="final2">0</span>
+			<br />
+			<a class="btn" href="javascript:game.start();">不信了再来</a>
+		</p>
+	</div>
+<!--暂停-->
+	<div id="gamePause">
+		<div></div>
+		<p>
+			<a class="btn" href="javascript:time();">继续</a>
+		</p>
+	</div>
+  <script src="index.js"></script>
  </body>
 </html>
